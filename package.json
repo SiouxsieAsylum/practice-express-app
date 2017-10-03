@@ -1,0 +1,23 @@
+{
+  "name": "practice-express-app",
+  "version": "1.0.0",
+  "description": "Practice application to get used to express's routing.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiouxsieAsylum/practice-express-app.git"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*"
+  },
+  "author": "Andrea McKenzie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiouxsieAsylum/practice-express-app/issues"
+  },
+  "homepage": "https://github.com/SiouxsieAsylum/practice-express-app#readme"
+}
