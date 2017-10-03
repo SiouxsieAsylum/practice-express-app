@@ -1,4 +1,4 @@
-# express practice application
+# Express.js practice application
 
 ### This is a practice express.js app that I'll be making along with a tutorial by Travesty media. Any notes I need will be taken here. 
 
@@ -15,17 +15,19 @@ initialize a git in the folder where your app will be, the json fo;e will read i
 
 You can add your dependancies like express to the json file as "dependancies":
 
-`"dependancies":{
+```javascript
+"dependancies":{
     "express":"*",
     //etc
-},`
+},
+```
 
 **Key dependancies:**
-..* express
-..* body-parser
-..* nodemon
-..* ejs
-..* pug (for template literals)
+  * `express`
+  * `body-parser`
+  * `nodemon`
+  * `ejs`
+  * `pug` (for template literals)
 
 **Please note!** The comma is very important in a JSON file!
 
@@ -54,9 +56,9 @@ GET, PUT, POST, DELETE are types of server requests. They have javascript functi
 
 Any change you make will not show until you restart the server. 
 
-..* `.send(string)` => prints out what you put in the parens.
-..* `.json(key)` => prints out the value of they key/value pair in a json object
-..* `path.join(__dirname, folder)` used to set the path for reading views
+  * `.send(string)` => prints out what you put in the parens.
+  * `.json(key)` => prints out the value of they key/value pair in a json object
+  * `path.join(__dirname, folder)` used to set the path for reading views
 
 # routing cheat sheet
 
@@ -68,7 +70,7 @@ Middlewere is a series of fucntions hthat have access to the request and respons
 
 **Order is important!** Middlewere must be above the actual route handler. 
 
- -> Look up documentation for body-parser
+   * Look up documentation for body-parser
 
 # Static resources!
 
@@ -81,15 +83,14 @@ Middlewere is a series of fucntions hthat have access to the request and respons
 Helps with the whole server restarting thing.
 `npm install nodemon -g` will restart your server with every change you make. 
 
-->Cheat sheet!!!!
-APIs written as JSON objects can be declared as you need them by writing the object and saving it as a variable. Then using the route setter `response`: 
+  * Cheat sheet!!!!
+APIs written as JSON objects can be declared as you need them by writing the object and saving it as a variable. Then using the route setter `response` to send it out throught the server.: 
 
 ```javascript
 app.get(route, function(req,res){
     res.json(obj);
-})``` 
-
-... to send it out throught the server. 
+})
+```  
 
 
 # Views
