@@ -52,6 +52,9 @@ Any change you make will not show until you restart the server.
 `.json(key)` => prints out the value of they key/value pair in a json object
 `path.join(__dirname, folder)` used to set the path for reading views
 
+#routing cheat sheet
+
+![alt-text](images/express-routing.png);
 
 #What is middlewere!
 
