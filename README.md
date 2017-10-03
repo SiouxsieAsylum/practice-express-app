@@ -20,7 +20,63 @@ You can add your dependancies like express to the json file as "dependancies":
     //etc
 },`
 
+Key dependancies:
+->express
+->body-parser
+-nodemon
+
 Please note! The comma is very important in a JSON file!
-Also note! `"*"` will mean the latest version.  
+Also note! `"*"` will mean the latest version. 
+Triple note! You cannot have a comma on the last item in an object!! 
 
 After that, run `npm install`
+
+You can run the app in the console by going `node app`
+
+Core of any express app: 
+`const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const app = express();
+// actual server run and callback
+app.listen(3000, function(){
+  console.log("Server started on port 3k!")`
+
+"Cannot GET /" means can't get the home page
+GET, PUT, POST, DELETE are types of server requests. They have javascript functions named after them (e.g. get() for handling a GET request. )
+
+Any change you make will not show until you restart the server. 
+
+.send(string) => prints out what you put in the parens. 
+.json(key) => prints out the value of they key/value pair in a json object
+
+
+#What is middlewere!
+
+Middlewere is a series of fucntions hthat have access to the request and response object and to the next function in the stack taht is set up to handle taht request or response. 
+
+Order is important! Middlewere must be above the actual route handler. 
+
+ -> Look up documentation for body-parser
+
+#Static resources!
+
+ `static folder` is essentially the front end folder. Holds css, jquery, etc. 
+ `index.html` will always overwrite any app.js
+    -NOT NECESSARY if you'd rather render views. 
+
+#Install nodemon:
+Helps with the whole server restarting thing.
+`npm install nodemon -g` will restart your server with every change you make. 
+
+->Cheat sheet!!!!
+APIs written as JSON objects can be declared as you need them by writing the object and saving it as a variable. Then using the route setter `response` (the `app.get(route, function(req,res){res.json(obj);})` ) to send it out throught the server. 
+
+
+
+
+
+
+
+
+
