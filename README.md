@@ -23,7 +23,8 @@ You can add your dependancies like express to the json file as "dependancies":
 Key dependancies:
 ->express
 ->body-parser
--nodemon
+->nodemon
+-> ejs
 
 Please note! The comma is very important in a JSON file!
 Also note! `"*"` will mean the latest version. 
@@ -47,8 +48,9 @@ GET, PUT, POST, DELETE are types of server requests. They have javascript functi
 
 Any change you make will not show until you restart the server. 
 
-.send(string) => prints out what you put in the parens. 
-.json(key) => prints out the value of they key/value pair in a json object
+`.send(string)` => prints out what you put in the parens. 
+`.json(key)` => prints out the value of they key/value pair in a json object
+`path.join(__dirname, folder)` used to set the path for reading views
 
 
 #What is middlewere!
@@ -72,6 +74,10 @@ Helps with the whole server restarting thing.
 ->Cheat sheet!!!!
 APIs written as JSON objects can be declared as you need them by writing the object and saving it as a variable. Then using the route setter `response` (the `app.get(route, function(req,res){res.json(obj);})` ) to send it out throught the server. 
 
+
+#Views
+views are the client-side face of the app. 
+Unlike index.html, a view has to be set as the default when routing. 
 
 
 

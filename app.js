@@ -13,6 +13,10 @@ const app = express();
 // // required to use said middlewere.
 // app.use(logger);
 
+// how we generate and translate views
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // handles parsing JSONcontent
 app.use(bodyParser.json());
 //allows us to _______ ?
@@ -29,7 +33,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // will handle a get request from a user to the home page ("/");
 app.get("/", function(request, response){
-  response.send("You are an app");
+  // response.send("You are an app");
+  var title = "Practice App";
+
+  // with one argument, passes view as entry.
+  // two arguments passes values onto the view with <%= %>
+  response.render("index", {
+    title: title
+  });
 })
 
 
