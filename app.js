@@ -10,6 +10,10 @@ const app = express();
 //   next();
 // }
 
+// you must use node app in the directory your app is in to launch the app
+// nodemon runs the server for you and refreshes whenever you make a change
+
+
 // // required to use said middlewere.
 // app.use(logger);
 

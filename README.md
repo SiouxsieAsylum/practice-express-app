@@ -49,6 +49,7 @@ const app = express();
 // actual server run and callback
 app.listen(3000, function(){
   console.log("Server started on port 3k!")
+  })
   ```
 
 "Cannot GET /" means can't get the home page
