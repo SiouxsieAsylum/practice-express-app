@@ -10,6 +10,55 @@
 <body>
   <h1>EJS ENABLED</h1>
   <h2><%= title %></h2>
+
+  <% if (errors) { %>
+    <% console.log(errors)%>
+    <ul>
+    <% for (let e in errors) {%>
+    <li><%= errors[e].msg %></li>
+    <% console.log(errors[e].msg )%>
+    <% } %>
+    </ul>
+  <% } %>
+
+  <h3>Form</h3>
+  <form method="POST" action="/users/add">
+    <label>FirstName</label>
+      <input type="text" name = "firstName">
+      <br>
+      <br>
+    <label>Last Name</label>
+      <input type="text" name = "lastName">
+      <br>
+      <br>
+    <label>Email</label>
+      <input type="text" name = "email">
+      <br>
+      <br>
+    <label>Description</label>
+      <textarea></textarea>
+      <br>
+      <br>
+      <br>
+    <input type="submit" value="submit">
+  </form>
+
+  <ul>
+  <% for (let u in users) { %>
+
+    <!-- string interpolation to manipulate multiple variables at once; otherwise only the second one will print. -->
+
+   <li> <%= `${users[u].lastName}, ${users[u].firstName}`  %></li>
+
+   <!-- or -->
+   <!-- please be advised that you have to comment out the javascript as well as the html. Use the // in the <% %> -->
+
+   <!-- <li> <%= //user.firstname  %><%=  //user.lastname %></li> -->
+
+   <li> <%= users[u].email  %></li>
+
+  <% }%>
+  </ul>
 </body>
 
 </html>
